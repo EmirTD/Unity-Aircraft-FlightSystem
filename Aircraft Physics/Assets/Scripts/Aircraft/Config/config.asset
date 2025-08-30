@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed3eb0898f9bcb4da61e0d062f15dbc, type: 3}
+  m_Name: config
+  m_EditorClassIdentifier: 
+  Sref: 30
+  span: 10
+  chord: 3
+  useCLvsAlphaCurve: 0
+  curveInDegrees: 1
+  CLvsAlpha:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  enableCLClamp: 1
+  CLmin: -1.2
+  CLmax: 1.8
+  CL0: 0.2
+  CLa: 5.5
+  CLq: -8
+  CLde: 0.7
+  CD0: 0.025
+  k: 0.06
+  CDa2: 0
+  CDq: 0.02
+  enableMachDragRise: 1
+  machDragRiseStart: 0.72
+  machDragRiseK: 0.4
+  CYb: -0.9
+  CYp: -0.1
+  CYr: 0.25
+  CYda: 0
+  CYdr: 0.2
+  useCMvsAlphaCurve: 0
+  CMvsAlpha:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  Cm0: 0.02
+  Cma: -1
+  Cmq: -20
+  Cmde: -1.1
+  Clb: -0.12
+  Clp: -0.5
+  Clr: 0.25
+  Clda: 0.08
+  Cldr: 0.02
+  Cnb: 0.25
+  Cnp: -0.06
+  Cnr: -0.3
+  Cnda: 0.02
+  Cndr: -0.1
