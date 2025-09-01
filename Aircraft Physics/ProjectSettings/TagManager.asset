@@ -8,6 +8,7 @@ TagManager:
   - Runway
   - Ground
   - Waypoint
+  - teker
   layers:
   - Default
   - TransparentFX

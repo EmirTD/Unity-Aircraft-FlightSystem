@@ -120,13 +120,13 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Throttle"",
-                    ""type"": ""Value"",
-                    ""id"": ""93bf7b65-d4c9-44d2-86c5-5db3dae0e056"",
-                    ""expectedControlType"": ""Axis"",
+                    ""name"": ""Land"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7287377-f213-44f3-b0a7-a13ffe2e427d"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -230,35 +230,299 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": """",
+                    ""id"": ""0854471b-6478-4c4d-bb25-5db3fb7eef0f"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Land"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Ground"",
+            ""id"": ""98153074-bd9e-405f-b3a5-dc739dabe8e5"",
+            ""actions"": [
+                {
+                    ""name"": ""ThrottleGround"",
+                    ""type"": ""Value"",
+                    ""id"": ""58161a84-8b79-4e82-b8af-3ac764fca6fe"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Steer"",
+                    ""type"": ""Value"",
+                    ""id"": ""879342d4-ee20-4383-8e41-c60e6fe09694"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Brake"",
+                    ""type"": ""Button"",
+                    ""id"": ""77853fd8-2695-4c3f-8da0-de6f21d3f22b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""BoostThrottleGround"",
+                    ""type"": ""Button"",
+                    ""id"": ""1f9a4559-2708-4f1c-8b25-07f8d710803d"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
                     ""name"": ""1D Axis"",
-                    ""id"": ""482aac1a-dcdc-461e-8088-481837a0fcf6"",
+                    ""id"": ""6317b04b-7c86-43f1-bc2d-51c76d4784cb"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Throttle"",
+                    ""action"": ""ThrottleGround"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""negative"",
-                    ""id"": ""dab4af0e-a715-4756-8604-f2b5be7456fc"",
-                    ""path"": ""<Keyboard>/leftCtrl"",
+                    ""id"": ""75a2156e-4d01-44c3-b663-2f98070be572"",
+                    ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Throttle"",
+                    ""action"": ""ThrottleGround"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""3c400f66-2851-4d3d-987e-5de180ecac6e"",
+                    ""id"": ""833d7117-3c07-4498-a04d-8787446f07ae"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrottleGround"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""de2e04fe-1537-4f46-bf86-46cdb2ff4dec"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2b601939-37f2-40c0-84a5-24bd16f05c46"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""b15b41b4-6396-4147-88b2-0d136396d330"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95add57c-ab88-4592-bc00-1250989ec532"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6223cf66-df10-4c35-8a18-13cf145019fa"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Throttle"",
+                    ""action"": ""BoostThrottleGround"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Landing"",
+            ""id"": ""74308eb2-d33a-4756-9d29-d77dd6788c18"",
+            ""actions"": [
+                {
+                    ""name"": ""Land"",
+                    ""type"": ""Button"",
+                    ""id"": ""5d3d4169-6e0b-4bef-bcef-6e9b2c2e1d9c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Roll"",
+                    ""type"": ""Value"",
+                    ""id"": ""451ef8db-bcfa-4412-88f3-9999b594acb8"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pitch"",
+                    ""type"": ""Value"",
+                    ""id"": ""a8f8e559-d555-4473-9e87-b9d956155716"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Yaw"",
+                    ""type"": ""Value"",
+                    ""id"": ""d1e58eac-0d25-4321-9ce8-d3ab28d46c11"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""5d3588d7-b4f9-49c1-a2f0-1adba254c6a3"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Land"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""41e99ee4-b248-42c4-85ff-63c6ba9fa23a"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""db7cd478-b6f7-483e-983d-4dc0fa42f57e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""404cc1ec-f8e4-4fcd-8d26-3ec6e21fcce9"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""ae8c0d3d-e515-4a55-9b17-9c3359530f93"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pitch"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e7cdb681-55f4-4451-bec3-935e808fddd9"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""ea1b09c0-1ee2-4b17-a9ab-8d32ba14d026"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pitch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""cbdd0f67-9e57-41a4-b316-2ab0c17ae77a"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yaw"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""efed9d47-aad4-49a0-8018-b2eb94209640"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yaw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""17ce9861-b315-49fe-b9d7-5a617b53e06b"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Yaw"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -272,12 +536,26 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
         m_Flight_Roll = m_Flight.FindAction("Roll", throwIfNotFound: true);
         m_Flight_Pitch = m_Flight.FindAction("Pitch", throwIfNotFound: true);
         m_Flight_Yaw = m_Flight.FindAction("Yaw", throwIfNotFound: true);
-        m_Flight_Throttle = m_Flight.FindAction("Throttle", throwIfNotFound: true);
+        m_Flight_Land = m_Flight.FindAction("Land", throwIfNotFound: true);
+        // Ground
+        m_Ground = asset.FindActionMap("Ground", throwIfNotFound: true);
+        m_Ground_ThrottleGround = m_Ground.FindAction("ThrottleGround", throwIfNotFound: true);
+        m_Ground_Steer = m_Ground.FindAction("Steer", throwIfNotFound: true);
+        m_Ground_Brake = m_Ground.FindAction("Brake", throwIfNotFound: true);
+        m_Ground_BoostThrottleGround = m_Ground.FindAction("BoostThrottleGround", throwIfNotFound: true);
+        // Landing
+        m_Landing = asset.FindActionMap("Landing", throwIfNotFound: true);
+        m_Landing_Land = m_Landing.FindAction("Land", throwIfNotFound: true);
+        m_Landing_Roll = m_Landing.FindAction("Roll", throwIfNotFound: true);
+        m_Landing_Pitch = m_Landing.FindAction("Pitch", throwIfNotFound: true);
+        m_Landing_Yaw = m_Landing.FindAction("Yaw", throwIfNotFound: true);
     }
 
     ~@FlightControls()
     {
         UnityEngine.Debug.Assert(!m_Flight.enabled, "This will cause a leak and performance issues, FlightControls.Flight.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Ground.enabled, "This will cause a leak and performance issues, FlightControls.Ground.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Landing.enabled, "This will cause a leak and performance issues, FlightControls.Landing.Disable() has not been called.");
     }
 
     /// <summary>
@@ -356,7 +634,7 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Flight_Roll;
     private readonly InputAction m_Flight_Pitch;
     private readonly InputAction m_Flight_Yaw;
-    private readonly InputAction m_Flight_Throttle;
+    private readonly InputAction m_Flight_Land;
     /// <summary>
     /// Provides access to input actions defined in input action map "Flight".
     /// </summary>
@@ -381,9 +659,9 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Yaw => m_Wrapper.m_Flight_Yaw;
         /// <summary>
-        /// Provides access to the underlying input action "Flight/Throttle".
+        /// Provides access to the underlying input action "Flight/Land".
         /// </summary>
-        public InputAction @Throttle => m_Wrapper.m_Flight_Throttle;
+        public InputAction @Land => m_Wrapper.m_Flight_Land;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -419,9 +697,9 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
             @Yaw.started += instance.OnYaw;
             @Yaw.performed += instance.OnYaw;
             @Yaw.canceled += instance.OnYaw;
-            @Throttle.started += instance.OnThrottle;
-            @Throttle.performed += instance.OnThrottle;
-            @Throttle.canceled += instance.OnThrottle;
+            @Land.started += instance.OnLand;
+            @Land.performed += instance.OnLand;
+            @Land.canceled += instance.OnLand;
         }
 
         /// <summary>
@@ -442,9 +720,9 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
             @Yaw.started -= instance.OnYaw;
             @Yaw.performed -= instance.OnYaw;
             @Yaw.canceled -= instance.OnYaw;
-            @Throttle.started -= instance.OnThrottle;
-            @Throttle.performed -= instance.OnThrottle;
-            @Throttle.canceled -= instance.OnThrottle;
+            @Land.started -= instance.OnLand;
+            @Land.performed -= instance.OnLand;
+            @Land.canceled -= instance.OnLand;
         }
 
         /// <summary>
@@ -478,6 +756,264 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="FlightActions" /> instance referencing this action map.
     /// </summary>
     public FlightActions @Flight => new FlightActions(this);
+
+    // Ground
+    private readonly InputActionMap m_Ground;
+    private List<IGroundActions> m_GroundActionsCallbackInterfaces = new List<IGroundActions>();
+    private readonly InputAction m_Ground_ThrottleGround;
+    private readonly InputAction m_Ground_Steer;
+    private readonly InputAction m_Ground_Brake;
+    private readonly InputAction m_Ground_BoostThrottleGround;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Ground".
+    /// </summary>
+    public struct GroundActions
+    {
+        private @FlightControls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public GroundActions(@FlightControls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Ground/ThrottleGround".
+        /// </summary>
+        public InputAction @ThrottleGround => m_Wrapper.m_Ground_ThrottleGround;
+        /// <summary>
+        /// Provides access to the underlying input action "Ground/Steer".
+        /// </summary>
+        public InputAction @Steer => m_Wrapper.m_Ground_Steer;
+        /// <summary>
+        /// Provides access to the underlying input action "Ground/Brake".
+        /// </summary>
+        public InputAction @Brake => m_Wrapper.m_Ground_Brake;
+        /// <summary>
+        /// Provides access to the underlying input action "Ground/BoostThrottleGround".
+        /// </summary>
+        public InputAction @BoostThrottleGround => m_Wrapper.m_Ground_BoostThrottleGround;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Ground; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="GroundActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(GroundActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="GroundActions" />
+        public void AddCallbacks(IGroundActions instance)
+        {
+            if (instance == null || m_Wrapper.m_GroundActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GroundActionsCallbackInterfaces.Add(instance);
+            @ThrottleGround.started += instance.OnThrottleGround;
+            @ThrottleGround.performed += instance.OnThrottleGround;
+            @ThrottleGround.canceled += instance.OnThrottleGround;
+            @Steer.started += instance.OnSteer;
+            @Steer.performed += instance.OnSteer;
+            @Steer.canceled += instance.OnSteer;
+            @Brake.started += instance.OnBrake;
+            @Brake.performed += instance.OnBrake;
+            @Brake.canceled += instance.OnBrake;
+            @BoostThrottleGround.started += instance.OnBoostThrottleGround;
+            @BoostThrottleGround.performed += instance.OnBoostThrottleGround;
+            @BoostThrottleGround.canceled += instance.OnBoostThrottleGround;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="GroundActions" />
+        private void UnregisterCallbacks(IGroundActions instance)
+        {
+            @ThrottleGround.started -= instance.OnThrottleGround;
+            @ThrottleGround.performed -= instance.OnThrottleGround;
+            @ThrottleGround.canceled -= instance.OnThrottleGround;
+            @Steer.started -= instance.OnSteer;
+            @Steer.performed -= instance.OnSteer;
+            @Steer.canceled -= instance.OnSteer;
+            @Brake.started -= instance.OnBrake;
+            @Brake.performed -= instance.OnBrake;
+            @Brake.canceled -= instance.OnBrake;
+            @BoostThrottleGround.started -= instance.OnBoostThrottleGround;
+            @BoostThrottleGround.performed -= instance.OnBoostThrottleGround;
+            @BoostThrottleGround.canceled -= instance.OnBoostThrottleGround;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="GroundActions.UnregisterCallbacks(IGroundActions)" />.
+        /// </summary>
+        /// <seealso cref="GroundActions.UnregisterCallbacks(IGroundActions)" />
+        public void RemoveCallbacks(IGroundActions instance)
+        {
+            if (m_Wrapper.m_GroundActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="GroundActions.AddCallbacks(IGroundActions)" />
+        /// <seealso cref="GroundActions.RemoveCallbacks(IGroundActions)" />
+        /// <seealso cref="GroundActions.UnregisterCallbacks(IGroundActions)" />
+        public void SetCallbacks(IGroundActions instance)
+        {
+            foreach (var item in m_Wrapper.m_GroundActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_GroundActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="GroundActions" /> instance referencing this action map.
+    /// </summary>
+    public GroundActions @Ground => new GroundActions(this);
+
+    // Landing
+    private readonly InputActionMap m_Landing;
+    private List<ILandingActions> m_LandingActionsCallbackInterfaces = new List<ILandingActions>();
+    private readonly InputAction m_Landing_Land;
+    private readonly InputAction m_Landing_Roll;
+    private readonly InputAction m_Landing_Pitch;
+    private readonly InputAction m_Landing_Yaw;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Landing".
+    /// </summary>
+    public struct LandingActions
+    {
+        private @FlightControls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public LandingActions(@FlightControls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Landing/Land".
+        /// </summary>
+        public InputAction @Land => m_Wrapper.m_Landing_Land;
+        /// <summary>
+        /// Provides access to the underlying input action "Landing/Roll".
+        /// </summary>
+        public InputAction @Roll => m_Wrapper.m_Landing_Roll;
+        /// <summary>
+        /// Provides access to the underlying input action "Landing/Pitch".
+        /// </summary>
+        public InputAction @Pitch => m_Wrapper.m_Landing_Pitch;
+        /// <summary>
+        /// Provides access to the underlying input action "Landing/Yaw".
+        /// </summary>
+        public InputAction @Yaw => m_Wrapper.m_Landing_Yaw;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Landing; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="LandingActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(LandingActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="LandingActions" />
+        public void AddCallbacks(ILandingActions instance)
+        {
+            if (instance == null || m_Wrapper.m_LandingActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_LandingActionsCallbackInterfaces.Add(instance);
+            @Land.started += instance.OnLand;
+            @Land.performed += instance.OnLand;
+            @Land.canceled += instance.OnLand;
+            @Roll.started += instance.OnRoll;
+            @Roll.performed += instance.OnRoll;
+            @Roll.canceled += instance.OnRoll;
+            @Pitch.started += instance.OnPitch;
+            @Pitch.performed += instance.OnPitch;
+            @Pitch.canceled += instance.OnPitch;
+            @Yaw.started += instance.OnYaw;
+            @Yaw.performed += instance.OnYaw;
+            @Yaw.canceled += instance.OnYaw;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="LandingActions" />
+        private void UnregisterCallbacks(ILandingActions instance)
+        {
+            @Land.started -= instance.OnLand;
+            @Land.performed -= instance.OnLand;
+            @Land.canceled -= instance.OnLand;
+            @Roll.started -= instance.OnRoll;
+            @Roll.performed -= instance.OnRoll;
+            @Roll.canceled -= instance.OnRoll;
+            @Pitch.started -= instance.OnPitch;
+            @Pitch.performed -= instance.OnPitch;
+            @Pitch.canceled -= instance.OnPitch;
+            @Yaw.started -= instance.OnYaw;
+            @Yaw.performed -= instance.OnYaw;
+            @Yaw.canceled -= instance.OnYaw;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="LandingActions.UnregisterCallbacks(ILandingActions)" />.
+        /// </summary>
+        /// <seealso cref="LandingActions.UnregisterCallbacks(ILandingActions)" />
+        public void RemoveCallbacks(ILandingActions instance)
+        {
+            if (m_Wrapper.m_LandingActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="LandingActions.AddCallbacks(ILandingActions)" />
+        /// <seealso cref="LandingActions.RemoveCallbacks(ILandingActions)" />
+        /// <seealso cref="LandingActions.UnregisterCallbacks(ILandingActions)" />
+        public void SetCallbacks(ILandingActions instance)
+        {
+            foreach (var item in m_Wrapper.m_LandingActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_LandingActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="LandingActions" /> instance referencing this action map.
+    /// </summary>
+    public LandingActions @Landing => new LandingActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Flight" which allows adding and removing callbacks.
     /// </summary>
@@ -507,11 +1043,83 @@ public partial class @FlightControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnYaw(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Throttle" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "Land" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnThrottle(InputAction.CallbackContext context);
+        void OnLand(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Ground" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="GroundActions.AddCallbacks(IGroundActions)" />
+    /// <seealso cref="GroundActions.RemoveCallbacks(IGroundActions)" />
+    public interface IGroundActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "ThrottleGround" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnThrottleGround(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Steer" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnSteer(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Brake" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBrake(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "BoostThrottleGround" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnBoostThrottleGround(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Landing" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="LandingActions.AddCallbacks(ILandingActions)" />
+    /// <seealso cref="LandingActions.RemoveCallbacks(ILandingActions)" />
+    public interface ILandingActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Land" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLand(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Roll" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnRoll(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pitch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPitch(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Yaw" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnYaw(InputAction.CallbackContext context);
     }
 }

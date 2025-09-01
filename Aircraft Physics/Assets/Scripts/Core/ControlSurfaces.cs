@@ -1,4 +1,3 @@
-// ControlSurfaces.cs
 using UnityEngine;
 
 public class ControlSurfaces : MonoBehaviour
@@ -16,7 +15,7 @@ public class ControlSurfaces : MonoBehaviour
 
     private ControlInput controlInput;
 
-    // Smoothness deðiþkeni ekle
+
     [Header("Rotation Settings")]
     [SerializeField] private float smoothness = 10f;
 
@@ -28,10 +27,9 @@ public class ControlSurfaces : MonoBehaviour
     private void Update()
     {
         float aileronRotation = controlInput.RollInput * aileronRotationLimit;
-        float elevatorRotation = controlInput.PitchInput * elevatorRotationLimit;
-        float rudderRotation = controlInput.YawInput * rudderRotationLimit;
+        float elevatorRotation = NonZero(controlInput.PitchInput * elevatorRotationLimit, controlInput.BoostInput * elevatorRotationLimit);
+        float rudderRotation = NonZero(controlInput.YawInput * rudderRotationLimit, controlInput.SteerInput * rudderRotationLimit);
 
-        // Dönüþü yumuþatmak için Slerp kullan
         if (leftAileron != null)
         {
             Quaternion targetAileronRot = Quaternion.Euler(-aileronRotation, 0, 0);
@@ -52,5 +50,12 @@ public class ControlSurfaces : MonoBehaviour
             Quaternion targetRudderRot = Quaternion.Euler(0, -rudderRotation, 0);
             rudder.localRotation = Quaternion.Slerp(rudder.localRotation, targetRudderRot, Time.deltaTime * smoothness);
         }
+    }
+
+    private float NonZero(float a, float b)
+    {
+        if (a != 0f) return a;
+        if (b != 0f) return b;
+        return 0f;
     }
 }
